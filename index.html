@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Academic Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="hero">
+  <h1 id="hero-name">Dea Anadon</h1>
+  <svg class="chalk-underline" viewBox="0 0 200 14" aria-hidden="true">
+    <path d="M4 8 C 50 2, 150 12, 196 6"></path>
+  </svg>
+  <p id="hero-desc">"Jeramiah 29:11 Focuses on God's plans for hope and a Future."</p>
+</header>
+
+<nav class="tabs" role="tablist" aria-label="Portfolio sections">
+  <button class="tab active" data-tab="profile" role="tab" aria-selected="true">Profile</button>
+  <button class="tab" data-tab="quiz" role="tab" aria-selected="false">Quizzes</button>
+  <button class="tab" data-tab="laboratory" role="tab" aria-selected="false">Laboratory</button>
+  <button class="tab" data-tab="exam" role="tab" aria-selected="false">Exams</button>
+  <button class="tab" data-tab="activities" role="tab" aria-selected="false">Activities</button>
+</nav>
+
+<main>
+
+  <!-- PROFILE -->
+  <section id="profile" class="panel active">
+    <div class="panel-inner">
+      <div class="notebook-page">
+
+        <div class="profile-display" id="profile-display">
+          <h1 id="profile-name">Dea Anadon</h1>
+          <p id="profile-desc">BSCS-3B 
+            i love playing volleyball
+            i love spicy food
+            i love playing codm.</p>
+          <button class="edit-profile-btn" id="edit-profile-btn">Edit profile</button>
+        </div>
+
+        <form class="profile-form" id="profile-form">
+          <label for="input-name">Name</label>
+          <input type="text" id="input-name" maxlength="60" required>
+
+          <label for="input-desc">Im Dea, a motivated and lovable person.</label>
+          <textarea id="input-desc" maxlength="300"></textarea>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-primary">Save changes</button>
+            <button type="button" class="btn-secondary" id="cancel-profile-btn">Cancel</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section id="quiz" class="panel">
+    <div class="panel-inner">
+      <h2>Quizzes</h2>
+      <div class="board">
+        <button class="add-btn" data-section="quiz">Quiz</button>
+        <img src="ddd" style="max-width:100%; margin-bottom:1rem;">
+        <div class="cards-grid" id="quiz-cards"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LABORATORY -->
+  <section id="laboratory" class="panel">
+    <div class="panel-inner">
+      <h2>Laboratory</h2>
+      <div class="board">
+        <button class="add-btn" data-section="laboratory">Lab activity</button>
+        <div class="cards-grid" id="laboratory-cards"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXAM -->
+  <section id="exam" class="panel">
+    <div class="panel-inner">
+      <h2>Exams</h2>
+      <div class="board">
+        <button class="add-btn" data-section="exam">Exam</button>
+        <div class="cards-grid" id="exam-cards"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACTIVITIES -->
+  <section id="activities" class="panel">
+    <div class="panel-inner">
+      <h2>Activities</h2>
+      <div class="board">
+        <button class="add-btn" data-section="activities">Activity</button>
+        <div class="cards-grid" id="activities-cards"></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+<!-- Add-card modal -->
+<div id="modal-overlay">
+  <div class="modal-card">
+    <h2 id="modal-title">Add card</h2>
+    <form id="card-form">
+      <label for="card-title">Title</label>
+      <input type="text" id="card-title" maxlength="60" required>
+
+      <label for="card-notes">Notes (optional)</label>
+      <textarea id="card-notes" maxlength="300"></textarea>
+
+      <label for="card-image">Image (optional)</label>
+      <input type="file" id="card-image" accept="image/*">
+      <img id="image-preview" alt="Preview of the selected image">
+
+      <div class="form-actions">
+        <button type="submit" class="btn-primary">Pin it</button>
+        <button type="button" class="btn-secondary" id="cancel-card-btn">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
